@@ -518,7 +518,7 @@ button {
   margin: 0 auto 16px auto;
   background: linear-gradient(180deg, #DC2626 0%, #B91C1C 50%, #991B1B 100%);
   color: #FFFFFF !important;
-  padding: 18px 24px;
+  padding: 14px 20px;
   border-radius: var(--radius-md);
   box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4), 0 8px 30px rgba(185, 28, 28, 0.22);
   border: 1px solid #EF4444;
@@ -537,18 +537,23 @@ button {
 
 .btn-cta-main-text {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .btn-cta-subtext {
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 600;
   opacity: 0.92;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin-top: 4px;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 @keyframes cta-pulse {
@@ -1283,17 +1288,20 @@ button {
   /* Master CTA Button */
   .btn-cta-master {
     max-width: 100%;
-    padding: 15px 16px;
+    padding: 13px 14px;
+    margin: 0 auto 14px auto;
   }
 
   .btn-cta-main-text {
-    font-size: 1.05rem;
+    font-size: clamp(0.85rem, 3.8vw, 1.05rem);
     letter-spacing: 0.02em;
+    white-space: nowrap;
   }
 
   .btn-cta-subtext {
-    font-size: 0.7rem;
+    font-size: clamp(0.64rem, 2.7vw, 0.72rem);
     margin-top: 3px;
+    white-space: nowrap;
   }
 
   /* Main Offer Box */
@@ -1559,12 +1567,18 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .btn-cta-master {
+    padding: 11px 10px;
+  }
+
   .btn-cta-main-text {
-    font-size: 0.95rem;
+    font-size: clamp(0.74rem, 3.5vw, 0.92rem);
+    white-space: nowrap;
   }
 
   .btn-cta-subtext {
-    font-size: 0.66rem;
+    font-size: clamp(0.58rem, 2.4vw, 0.66rem);
+    white-space: nowrap;
   }
 
   .price-comparison-box {

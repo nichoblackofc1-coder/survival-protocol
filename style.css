@@ -404,6 +404,7 @@ button {
    OFFER CONTAINER CARD
    ========================================================================== */
 .offer-box-container {
+  scroll-margin-top: 18px;
   background: #FFFFFF;
   border-radius: var(--radius-lg);
   border: 2px solid #E2E8F0;

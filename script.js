@@ -58,16 +58,26 @@
   // =========================================================================
   function initSmoothScroll() {
     var ctaButtons = document.querySelectorAll('a[href="#checkout"]');
-    var target = document.getElementById('checkout-order-box');
+    var target = document.getElementById('checkout') || document.getElementById('checkout-order-box');
     if (!target) return;
 
     ctaButtons.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
-        // If it's a real checkout external URL, let it navigate.
-        // If it's still #checkout anchor, smoothly scroll down to the offer box!
-        if (this.getAttribute('href') === '#checkout') {
+        var href = this.getAttribute('href');
+        if (href === '#checkout') {
+          // If the button is already inside the checkout box, don't re-scroll
+          if (this.id === 'main-cta-button') {
+            return;
+          }
           e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          var headerOffset = 18;
+          var elementPosition = target.getBoundingClientRect().top;
+          var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }
       });
     });

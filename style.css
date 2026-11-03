@@ -752,12 +752,6 @@ button {
   flex-grow: 1;
 }
 
-.bonus-guarantee-card {
-  grid-column: 1 / -1;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFBEB 100%);
-  border-color: var(--secondary-amber-border);
-}
-
 .mid-cta-container {
   text-align: center;
   margin: 28px 0;

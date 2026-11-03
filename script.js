@@ -73,11 +73,30 @@
     });
   }
 
+  // =========================================================================
+  // META PIXEL INITIATE CHECKOUT TRACKING
+  // =========================================================================
+  function initPixelTracking() {
+    var mainBtn = document.getElementById('main-cta-button');
+    if (mainBtn) {
+      mainBtn.addEventListener('click', function () {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'InitiateCheckout', {
+            content_name: 'The Civilian War Survival Protocol',
+            value: 9.90,
+            currency: 'USD'
+          });
+        }
+      });
+    }
+  }
+
   // DOM Content Loaded
   document.addEventListener('DOMContentLoaded', function () {
     initFaq();
     initComments();
     initSmoothScroll();
+    initPixelTracking();
   });
 
 })();

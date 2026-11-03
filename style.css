@@ -1234,48 +1234,70 @@ button {
 
   /* Hero Section */
   .hero-sales-section {
-    padding: 22px 0 16px 0;
+    padding: 14px 0 10px 0;
   }
 
   .authority-eyebrow {
-    font-size: 0.74rem;
-    padding: 4px 12px;
-    margin-bottom: 12px;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    margin-bottom: 10px;
     line-height: 1.35;
     text-align: center;
   }
 
   .main-headline {
-    font-size: 1.45rem;
-    line-height: 1.28;
-    margin-bottom: 18px;
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
   }
 
   /* Banner & Feature Pills */
   .hero-banner-container {
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .hero-banner-frame {
+    order: 1;
     border-radius: var(--radius-sm);
   }
 
+  .hero-cta-wrap {
+    order: 2;
+    margin: 12px auto 8px auto;
+    width: 100%;
+  }
+
   .product-highlight-pills {
+    order: 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 14px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px 8px;
+    margin: 4px auto 14px auto;
+    width: 100%;
+    max-width: 460px;
   }
 
   .product-pill {
-    font-size: 0.7rem;
-    padding: 6px 10px;
+    font-size: clamp(0.62rem, 2.5vw, 0.7rem);
+    padding: 5px 6px;
+    border-radius: 6px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    color: #475569;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     justify-content: center;
     text-align: center;
+    white-space: nowrap;
+    box-shadow: none;
   }
 
-  .hero-cta-wrap {
-    margin: 18px auto 26px auto;
+  .product-pill svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
   }
 
   /* Master CTA Button */
@@ -1552,12 +1574,39 @@ button {
     font-size: 0.54rem;
   }
 
+  .hero-sales-section {
+    padding: 10px 0 6px 0;
+  }
+
+  .authority-eyebrow {
+    font-size: 0.64rem;
+    padding: 2px 8px;
+    margin-bottom: 8px;
+  }
+
   .main-headline {
-    font-size: 1.28rem;
+    font-size: clamp(1.1rem, 4.8vw, 1.25rem);
+    line-height: 1.22;
+    margin-bottom: 10px;
+  }
+
+  .hero-banner-container {
+    margin-bottom: 14px;
+  }
+
+  .hero-cta-wrap {
+    margin: 10px auto 6px auto;
   }
 
   .product-highlight-pills {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 5px 6px;
+    margin: 4px auto 12px auto;
+  }
+
+  .product-pill {
+    font-size: clamp(0.56rem, 2.3vw, 0.65rem);
+    padding: 4px 4px;
   }
 
   .btn-cta-master {

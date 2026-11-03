@@ -45,6 +45,7 @@ const server = http.createServer((req, res) => {
 
     res.writeHead(200, {
       'Content-Type': contentType,
+      'Content-Language': 'en',
       'Cache-Control': 'no-cache'
     });
 
